@@ -1,0 +1,101 @@
+[
+{
+    "payload":{
+        "conversation_created": {
+            "conversation": {
+                "broadcast_channels": ["chat"],
+                "conversation_type": "support",
+                    "created_by": {
+                    "display_id": "REVU-13oDqjiEz",
+                    "display_name": "Unknown Salvatore4376",
+                    "external_ref": "14dd594e-6694-4c48-b588-ad55a1173503",
+                    "id": "don:identity:dvrv-in-1:devo/2Qco885cqq:revu/13oDqjiEz",
+                    "id_v1": "don:DEV-2Qco885cqq:rev_user:REVU-13oDqjiEz",
+                    "state": "active",
+                    "thumbnail": "https://api.devrev.ai/internal/display-picture/Unknown%20Salvatore4376.png",
+                    "type": "rev_user"
+                    },
+                "created_date": "2024-11-23T13:46:45.181Z",
+                "display_id": "CONV-16",
+                "id": "don:core:dvrv-in-1:devo/2Qco885cqq:conversation/16",
+                "id_v1": "don:DEV-2Qco885cqq:conversation:16",
+                "is_creator_verified": false,
+                "is_spam": false,
+                "members": [
+                {
+                    "display_id": "REVU-13oDqjiEz",
+                    "display_name": "Unknown Salvatore4376",
+                    "external_ref": "14dd594e-6694-4c48-b588-ad55a1173503",
+                    "id": "don:identity:dvrv-in-1:devo/2Qco885cqq:revu/13oDqjiEz",
+                    "id_v1": "don:DEV-2Qco885cqq:rev_user:REVU-13oDqjiEz",
+                    "state": "active",
+                    "thumbnail": "https://api.devrev.ai/internal/display-picture/Unknown%20Salvatore4376.png",
+                    "type": "rev_user"
+                }
+                ],
+                "metadata": {
+                    "url_context": "https://app.devrev.ai/static/plug-settings/live-preview.html?appId=don%3Acore%3Advrv-in-1%3Adevo%2F2Qco885cqq%3Aplug_setting%2F1&env=PROD"
+                },
+                "modified_by": {
+                    "display_id": "REVU-13oDqjiEz",
+                    "display_name": "Unknown Salvatore4376",
+                    "external_ref": "14dd594e-6694-4c48-b588-ad55a1173503",
+                    "id": "don:identity:dvrv-in-1:devo/2Qco885cqq:revu/13oDqjiEz",
+                    "id_v1": "don:DEV-2Qco885cqq:rev_user:REVU-13oDqjiEz",
+                    "state": "active",
+                    "thumbnail": "https://api.devrev.ai/internal/display-picture/Unknown%20Salvatore4376.png",
+                    "type": "rev_user"
+                },
+                "modified_date": "2024-11-23T13:46:45.181Z",
+                "source_channel": "chat",
+                "stage": {
+                    "name": "new",
+                    "ordinal": 1000
+                },
+                "state": "open",
+                "status": "open",
+                "title": ""
+            },
+        "id": "don:integration:dvrv-in-1:devo/2Qco885cqq:webhook/uRCGTfYQ:webhook_event/xpOM64N5S4I",
+        "timestamp": "2024-11-23T13:46:46.04033Z",
+        "type": "conversation_created",
+        "unique_key": "ZG9uOmludGVncmF0aW9uOmR2cnYtaW4tMTpkZXZvLzJRY284ODVjcXE6ZXZlbnRfc291cmNlLzJlYzZhMmIyLWQyYjgtNDBmMS1hYWYyLWM2OTA4YjUwZjk5NA==",
+        "webhook_id": "don:integration:dvrv-in-1:devo/2Qco885cqq:webhook/uRCGTfYQ"
+        }
+        },
+        "context": {
+            "secrets": {
+                "service_account_token": "XXXXXX"
+            },
+        "service_account_id": "don:identity:dvrv-in-1:devo/2Qco885cqq:svcacc/11",
+        "dev_oid": "don:identity:dvrv-in-1:devo/2Qco885cqq",
+        "source_id": "don:integration:dvrv-in-1:devo/2Qco885cqq:automation/f748446b-5681-4830-a910-efe2cd7c5a92",
+        "snap_in_id": "don:integration:dvrv-in-1:devo/2Qco885cqq:snap_in/137e2738-b732-4d7f-b34f-24aefb44773b",
+        "snap_in_version_id": "don:integration:dvrv-in-1:devo/2Qco885cqq:snap_in_package/252f4f3e-4c92-461c-b60b-bc227d61e225:snap_in_version/90638e6c-7a4c-4807-9001-fc56d9c4de55",
+        "user_id": "don:identity:dvrv-in-1:devo/2Qco885cqq:svcacc/11",
+        "attempt_number": 1
+        },
+        "execution_metadata": {
+            "event_type": "conversation_created",
+            "function_name": "frustration_detection",
+            "request_id": "",
+            "devrev_endpoint": "https://api.devrev.ai"
+            },
+        "input_data": {
+            "global_values": {
+                "input_field_1": "Message from the input field.",
+                "input_field_2": true,
+                "threshold": -1
+        },
+        "event_sources": {
+            "devrev-webhook": "don:integration:dvrv-in-1:devo/2Qco885cqq:event_source/2ec6a2b2-d2b8-40f1-aaf2-c6908b50f994"
+        },
+        "keyrings": null,
+            "resources": {
+                "keyrings": {},
+                "tags": {}
+        }
+    
+  }
+}]
+  
