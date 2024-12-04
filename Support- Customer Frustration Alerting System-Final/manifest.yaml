@@ -1,0 +1,99 @@
+version: '2'
+
+name: Frustration_Detection
+description: Checks sentimental score and based on threshold sends message to slack and email.
+
+service_account:
+  display_name: "DevRev Bot"
+
+event_sources:
+  organization:
+    - name: devrev-webhook
+      display_name: DevRev
+      type: devrev-webhook
+      config:
+        event_types:
+          - conversation_updated
+
+inputs:
+  organization:
+    - name: your_email
+      description: Input field to add Email ID.
+      field_type: text
+      default_value: abc@gmail.com
+      ui:
+        display_name: Enter  your Email ID
+
+    - name: your_password
+      description: Input field to add Email Password.
+      field_type: text
+      default_value: abc123
+      ui:
+        display_name: Enter  your Email Password
+
+    - name: slack_token
+      description: Input field to add slack token.
+      field_type: text
+      default_value: token123
+      ui:
+        display_name: Enter  your Slack token
+
+    - name: conversation_id
+      description: Input field to add conversation id.
+      field_type: text
+      default_value: channelID
+      ui:
+        display_name: Enter  your Channel Id
+
+    - name: notification_medium
+      description: Through which medium would you prefer to notfy the team?
+      field_type: enum
+      allowed_values:
+       - Slack
+       - Email
+       - Both
+      is_required: true
+      default_value: Both
+      ui:
+        display_name: Notification medium
+
+    - name: threshold
+      description: Threshold for frustration.
+      field_type: text
+      default_value: "0"
+      ui:
+        display_name: Enter threshold for frustration detection
+
+functions:
+  - name: frustration_detection
+    description: Function to analyse customer emotion.
+  - name: function_2
+    description: Function to send automated message.
+
+automations:
+  - name: convergence_automation_devrev
+    source: devrev-webhook
+    event_types:
+      - conversation_updated
+    function: frustration_detection
+    
+
+commands:
+  - name: connect_to_engineer
+    namespace: devrev
+    description: Command to send automated message.
+    surfaces:
+      - surface: discussions
+        object_types:
+          - conversation
+    usage_hint: "Command to send automated message."
+    function: function_2
+
+developer_keyrings:
+  - name: open_ai
+    description: gpt4 model api for analysis
+    display_name: open_ai
+  - name: aiven_db
+    description: url to connect to database
+    display_name: aiven_db
+
